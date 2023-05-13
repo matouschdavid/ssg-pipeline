@@ -1,143 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Welcome to Firebase Hosting</title>
-
-		<!-- update the version number as needed -->
-		<script defer src="/__/firebase/9.22.0/firebase-app-compat.js"></script>
-		<!-- include only the Firebase features as you need -->
-		<script defer src="/__/firebase/9.22.0/firebase-auth-compat.js"></script>
-		<script defer src="/__/firebase/9.22.0/firebase-database-compat.js"></script>
-		<script defer src="/__/firebase/9.22.0/firebase-firestore-compat.js"></script>
-		<script defer src="/__/firebase/9.22.0/firebase-functions-compat.js"></script>
-		<script defer src="/__/firebase/9.22.0/firebase-messaging-compat.js"></script>
-		<script defer src="/__/firebase/9.22.0/firebase-storage-compat.js"></script>
-		<script defer src="/__/firebase/9.22.0/firebase-analytics-compat.js"></script>
-		<script defer src="/__/firebase/9.22.0/firebase-remote-config-compat.js"></script>
-		<script defer src="/__/firebase/9.22.0/firebase-performance-compat.js"></script>
-		<!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-		<script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-		<style media="screen">
-			body {
-				background: #eceff1;
-				color: rgba(0, 0, 0, 0.87);
-				font-family: Roboto, Helvetica, Arial, sans-serif;
-				margin: 0;
-				padding: 0;
-			}
-			#message {
-				background: white;
-				max-width: 360px;
-				margin: 100px auto 16px;
-				padding: 32px 24px;
-				border-radius: 3px;
-			}
-			#message h2 {
-				color: #ffa100;
-				font-weight: bold;
-				font-size: 16px;
-				margin: 0 0 8px;
-			}
-			#message h1 {
-				font-size: 22px;
-				font-weight: 300;
-				color: rgba(0, 0, 0, 0.6);
-				margin: 0 0 16px;
-			}
-			#message p {
-				line-height: 140%;
-				margin: 16px 0 24px;
-				font-size: 14px;
-			}
-			#message a {
-				display: block;
-				text-align: center;
-				background: #039be5;
-				text-transform: uppercase;
-				text-decoration: none;
-				color: white;
-				padding: 16px;
-				border-radius: 4px;
-			}
-			#message,
-			#message a {
-				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-			}
-			#load {
-				color: rgba(0, 0, 0, 0.4);
-				text-align: center;
-				font-size: 13px;
-			}
-			@media (max-width: 600px) {
-				body,
-				#message {
-					margin-top: 0;
-					background: white;
-					box-shadow: none;
-				}
-				body {
-					border-top: 16px solid #ffa100;
-				}
-			}
-		</style>
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="" />
+		<link href="./_app/immutable/assets/0.fa9427ff.css" rel="stylesheet" />
+		<link href="./_app/immutable/assets/2.265a38f0.css" rel="stylesheet" />
+		<link rel="modulepreload" href="./_app/immutable/entry/start.6469388f.js" />
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.05b97c2d.js" />
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.ef050840.js" />
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.22269ec3.js" />
+		<link rel="modulepreload" href="./_app/immutable/chunks/parse.d12b0d5b.js" />
+		<link rel="modulepreload" href="./_app/immutable/entry/app.1aebfdfb.js" />
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.a6ca449c.js" />
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores.cfdaed92.js" />
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.533e06fc.js" />
+		<title>Home</title>
+		<!-- HEAD_svelte-t32ptj_START -->
+		<meta name="description" content="Svelte demo app" />
+		<!-- HEAD_svelte-t32ptj_END -->
 	</head>
-	<body>
-		<div id="message">
-			<h2>Welcome</h2>
-			<h1>Firebase Hosting Setup Complete</h1>
-			<p>
-				You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go
-				build something extraordinary!
-			</p>
-			<a target="_blank" href="https://firebase.google.com/docs/hosting/"
-				>Open Hosting Documentation</a
-			>
-		</div>
-		<p id="load">Firebase SDK Loading&hellip;</p>
 
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				const loadEl = document.querySelector('#load');
-				// // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-				// // The Firebase SDK is initialized and available here!
-				//
-				// firebase.auth().onAuthStateChanged(user => { });
-				// firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-				// firebase.firestore().doc('/foo/bar').get().then(() => { });
-				// firebase.functions().httpsCallable('yourFunction')().then(() => { });
-				// firebase.messaging().requestPermission().then(() => { });
-				// firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-				// firebase.analytics(); // call to activate
-				// firebase.analytics().logEvent('tutorial_completed');
-				// firebase.performance(); // call to activate
-				//
-				// // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+			<div class="app svelte-8o1gnw">
+				<header class="svelte-1u9z1tp">
+					<div class="corner svelte-1u9z1tp">
+						<a href="https://kit.svelte.dev" class="svelte-1u9z1tp"
+							><img
+								src="/_app/immutable/assets/svelte-logo.87df40b8.svg"
+								alt="SvelteKit"
+								class="svelte-1u9z1tp"
+						/></a>
+					</div>
 
-				try {
-					let app = firebase.app();
-					let features = [
-						'auth',
-						'database',
-						'firestore',
-						'functions',
-						'messaging',
-						'storage',
-						'analytics',
-						'remoteConfig',
-						'performance'
-					].filter((feature) => typeof app[feature] === 'function');
-					loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-				} catch (e) {
-					console.error(e);
-					loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+					<nav class="svelte-1u9z1tp">
+						<svg viewBox="0 0 2 3" aria-hidden="true" class="svelte-1u9z1tp">
+							<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" class="svelte-1u9z1tp"></path>
+						</svg>
+						<ul class="svelte-1u9z1tp">
+							<li aria-current="page" class="svelte-1u9z1tp">
+								<a href="/" class="svelte-1u9z1tp">Home</a>
+							</li>
+							<li class="svelte-1u9z1tp"><a href="/about" class="svelte-1u9z1tp">About</a></li>
+							<li class="svelte-1u9z1tp"><a href="/sverdle" class="svelte-1u9z1tp">Sverdle</a></li>
+						</ul>
+						<svg viewBox="0 0 2 3" aria-hidden="true" class="svelte-1u9z1tp">
+							<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" class="svelte-1u9z1tp"></path>
+						</svg>
+					</nav>
+
+					<div class="corner svelte-1u9z1tp">
+						<a href="https://github.com/sveltejs/kit" class="svelte-1u9z1tp"
+							><img
+								src="/_app/immutable/assets/github.1ea8d62e.svg"
+								alt="GitHub"
+								class="svelte-1u9z1tp"
+						/></a>
+					</div>
+				</header>
+
+				<main class="svelte-8o1gnw">
+					<section class="svelte-19xx0bt">
+						<h1 class="svelte-19xx0bt">
+							<span class="welcome svelte-19xx0bt">
+								<picture>
+									<source
+										srcset="/_app/immutable/assets/svelte-welcome.c18bcf5a.webp"
+										type="image/webp"
+									/>
+									<img
+										src="/_app/immutable/assets/svelte-welcome.6c300099.png"
+										alt="Welcome"
+										class="svelte-19xx0bt"
+									/>
+								</picture>
+							</span>
+
+							to your new<br />SvelteKit app
+						</h1>
+
+						<h2>try editing <strong>src/routes/+page.svelte</strong></h2>
+
+						<div class="counter svelte-y96mxt">
+							<button aria-label="Decrease the counter by one" class="svelte-y96mxt">
+								<svg aria-hidden="true" viewBox="0 0 1 1" class="svelte-y96mxt">
+									<path d="M0,0.5 L1,0.5" class="svelte-y96mxt"></path>
+								</svg>
+							</button>
+
+							<div class="counter-viewport svelte-y96mxt">
+								<div class="counter-digits svelte-y96mxt" style="transform: translate(0, 0%)">
+									<strong class="hidden svelte-y96mxt" aria-hidden="true">1</strong>
+									<strong class="svelte-y96mxt">0</strong>
+								</div>
+							</div>
+
+							<button aria-label="Increase the counter by one" class="svelte-y96mxt">
+								<svg aria-hidden="true" viewBox="0 0 1 1" class="svelte-y96mxt">
+									<path d="M0,0.5 L1,0.5 M0.5,0 L0.5,1" class="svelte-y96mxt"></path>
+								</svg>
+							</button>
+						</div>
+					</section>
+				</main>
+
+				<footer class="svelte-8o1gnw">
+					<p>
+						visit <a href="https://kit.svelte.dev" class="svelte-8o1gnw">kit.svelte.dev</a> to learn
+						SvelteKit
+					</p>
+				</footer>
+			</div>
+
+			<script>
+				{
+					__sveltekit_2jgegq = {
+						base: new URL('.', location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null, null];
+
+					Promise.all([
+						import('./_app/immutable/entry/start.6469388f.js'),
+						import('./_app/immutable/entry/app.1aebfdfb.js')
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
 				}
-			});
-		</script>
+			</script>
+		</div>
 	</body>
 </html>
